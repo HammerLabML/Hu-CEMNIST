@@ -86,7 +86,7 @@ def load_human_generated_counterfactuals(path_in: str = "../Data/Hu-CEMNIST_vali
                 img = ImageOps.grayscale(Image.fromarray(img))
                 img = img.resize((28, 28))
 
-                return 255 - np.array(img.getdata()).flatten()
+                return 255 - np.array(img.getdata()).flatten() / 255.
             else:
                 return None
 
